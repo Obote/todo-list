@@ -8,14 +8,26 @@ document.addEventListener('DOMContentLoaded', function() {
   ];
 
   function populateTaskList(tasks) {
-    const todoList = document.getElementById('todo-list');
+    const taskList = document.getElementById('tasks');
 
     tasks.sort((a, b) => a.index - b.index);
 
     tasks.forEach(task => {
       const listItem = document.createElement('li');
-      listItem.textContent = task.description;
-      todoList.appendChild(listItem);
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.checked = task.completed;
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          listItem.classList.add('completed');
+        } else {
+          listItem.classList.remove('completed');
+        }
+      });
+
+      listItem.appendChild(checkbox);
+      listItem.appendChild(document.createTextNode(task.description));
+      taskList.appendChild(listItem);
     });
   }
 
