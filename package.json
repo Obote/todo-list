@@ -321,5 +321,6 @@
   "bugs": {
     "url": "https://github.com/Obote/todo-list/issues"
   },
-  "homepage": "https://github.com/Obote/todo-list#readme"
+  "homepage": "https://github.com/Obote/todo-list#readme",
+  "main": "webpack.config.js"
 }
