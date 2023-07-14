@@ -1,10 +1,10 @@
 import './style.css';
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   const tasks = [
     { description: 'Task 1', completed: false, index: 1 },
     { description: 'Task 2', completed: true, index: 2 },
-    { description: 'Task 3', completed: false, index: 3 }
+    { description: 'Task 3', completed: false, index: 3 },
   ];
 
   function populateTaskList(tasks) {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     tasks.sort((a, b) => a.index - b.index);
 
-    tasks.forEach(task => {
+    tasks.forEach((task) => {
       const listItem = document.createElement('li');
       listItem.classList.add('list-item');
 
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
       checkbox.type = 'checkbox';
       checkbox.classList.add('check');
       checkbox.checked = task.completed;
-      checkbox.addEventListener('change', function() {
+      checkbox.addEventListener('change', function () {
         if (this.checked) {
           listItem.classList.add('completed');
         } else {
