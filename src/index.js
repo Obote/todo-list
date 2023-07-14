@@ -14,8 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     tasks.forEach(task => {
       const listItem = document.createElement('li');
+      listItem.classList.add('list-item');
+
+      const listDiv = document.createElement('div');
+      listDiv.classList.add('list-div');
+
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
+      checkbox.classList.add('check');
       checkbox.checked = task.completed;
       checkbox.addEventListener('change', function() {
         if (this.checked) {
@@ -25,8 +31,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
 
-      listItem.appendChild(checkbox);
-      listItem.appendChild(document.createTextNode(task.description));
+      const description = document.createElement('p');
+      description.textContent = task.description;
+
+      const ellipsisIcon = document.createElement('i');
+      ellipsisIcon.classList.add('fa-solid', 'fa-ellipsis-vertical');
+
+      listDiv.appendChild(checkbox);
+      listDiv.appendChild(description);
+      listItem.appendChild(listDiv);
+      listItem.appendChild(ellipsisIcon);
+
       taskList.appendChild(listItem);
     });
   }
