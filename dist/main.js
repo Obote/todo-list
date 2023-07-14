@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\ndocument.addEventListener('DOMContentLoaded', function() {\n  const tasks = [\n    { description: 'Task 1', completed: false, index: 1 },\n    { description: 'Task 2', completed: true, index: 2 },\n    { description: 'Task 3', completed: false, index: 3 }\n  ];\n\n  function populateTaskList(tasks) {\n    const todoList = document.getElementById('todo-list');\n\n    tasks.sort((a, b) => a.index - b.index);\n\n    tasks.forEach(task => {\n      const listItem = document.createElement('li');\n      listItem.textContent = task.description;\n      todoList.appendChild(listItem);\n    });\n  }\n\n  populateTaskList(tasks);\n});\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
 
 /***/ })
 
