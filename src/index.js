@@ -10,4 +10,5 @@ document.querySelector('.AddTaskBtn').addEventListener('click', (e) => {
   const item = new Todo(listItem);
 
   display.addToDisplay(item);
+  display.resetForm();
 });

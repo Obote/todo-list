@@ -1,6 +1,6 @@
 function Display() {
   Display.prototype.addToDisplay = function (item) {
-    let newHTML = `
+    const newHTML = `
     <div class="task" data-createdat="${item.id}">
         <div class="taskDetails">
               <input type="checkbox" class="task-check" />
@@ -15,6 +15,10 @@ function Display() {
     `;
 
     document.querySelector('.taskList').insertAdjacentHTML('afterbegin', newHTML);
+  };
+
+  Display.prototype.resetForm = function () {
+    document.getElementById('newTaskID').value = '';
   };
 }
 

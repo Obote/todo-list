@@ -26,7 +26,7 @@ body {
   background: rgba(241, 228, 228, 0.77);
 }
 
-.taskList {
+.tasklist {
   width: 100%;
   margin: auto;
   min-height: 100vh;
@@ -218,13 +218,13 @@ nav header svg {
   color: #45046a;
 }
 
-.taskIconDelete {
+.taskIconDelete { 
   color: #c70039;
 }
 
 .taskIconDdit, .taskIconDelete {
   font-size: 2.3rem;
-  font-weight: bolder;
+  font-weight: bolder; 
   cursor: pointer;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
