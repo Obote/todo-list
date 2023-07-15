@@ -119,19 +119,15 @@ For more information on the importance of a professional README for your reposit
 
 In order to run this project you need:
 
-
 ```sh
 sudo apt install git-all
  or
 npm install
 ```
 
-
 ### Setup
 
 Clone this repository to your desired folder:
-
-
 
 ```sh
   cd my-folder
@@ -193,7 +189,6 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-
 👤 **Obote**
 
 - GitHub: [@Obote](https://github.com/Obote/)
@@ -205,7 +200,6 @@ Example:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
 
 - **Adding a new item**
 - **Removing a selected item**
