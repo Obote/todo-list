@@ -1,7 +1,6 @@
 import './style.css';
 import Display from './display.js';
 import Todo from './todo.js';
-import LocalStorage from './localstorage.js';
 
 const display = new Display();
 

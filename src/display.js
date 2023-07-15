@@ -1,5 +1,11 @@
+import LS from './localstorage.js';
+
 function Display() {
+  const ls = new LS();
+
   Display.prototype.addToDisplay = function (item) {
+    ls.storeItem(item);
+
     const newHTML = `
     <div class="task" data-createdate="${item.id}">
         <div class="taskDetails">
