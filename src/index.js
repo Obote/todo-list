@@ -12,3 +12,9 @@ document.querySelector('.AddTaskBtn').addEventListener('click', (e) => {
   display.addToDisplay(item);
   display.resetForm();
 });
+
+document.querySelector('.taskList').addEventListener('click', (e) => {
+  if (e.target.className.includes('taskIconDelete')) {
+    display.deleteTask(e);
+  }
+});

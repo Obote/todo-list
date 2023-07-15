@@ -222,7 +222,7 @@ nav header svg {
   color: #c70039;
 }
 
-.taskIconDdit, .taskIconDelete {
+.taskIconEdit, .taskIconDelete {
   font-size: 2.3rem;
   font-weight: bolder; 
   cursor: pointer;
