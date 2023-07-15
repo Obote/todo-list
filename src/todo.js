@@ -1,7 +1,7 @@
 function Todo(title) {
   this.id = new Date().toLocaleString();
   this.title = title;
-  this.isComplete = fasle;
+  this.isComplete = false;
 }
 
 export default Todo;

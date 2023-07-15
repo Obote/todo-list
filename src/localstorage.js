@@ -1,4 +1,4 @@
-function LocalStorage(){
+function LocalStorage() {
 
 }
 
