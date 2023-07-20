@@ -5,6 +5,7 @@ import Todo from './todo.js';
 const display = new Display();
 
 document.querySelector('.AddTaskBtn').addEventListener('click', (e) => {
+  e.preventDefault();
   const listItem = document.getElementById('newTaskID').value;
   const item = new Todo(listItem);
 
