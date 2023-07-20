@@ -175,6 +175,10 @@ nav header svg {
   outline: none;
 }
 
+.EditTaskBtn, .CancelTaskBtn{
+  display: none;
+}
+
 .task {
   margin: 1rem;
   background: #ffffff;

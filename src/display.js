@@ -1,12 +1,12 @@
 import LS from './localstorage.js';
 
-function Display() {
-  const ls = new LS();
+function Display() {}
+const ls = new LS();
 
-  Display.prototype.addToDisplay = function (item) {
-    ls.storeItem(item);
+Display.prototype.addToDisplay = function (item) {
+  ls.storeItem(item);
 
-    const newHTML = `
+  const newHTML = `
     <div class="task" data-createdate="${item.id}">
         <div class="taskDetails">
               <input type="checkbox" class="task-check" />
@@ -20,17 +20,18 @@ function Display() {
     </div>
     `;
 
-    document.querySelector('.taskList').insertAdjacentHTML('afterbegin', newHTML);
-  };
+  document.querySelector('.taskList').insertAdjacentHTML('afterbegin', newHTML);
+};
 
-  Display.prototype.resetForm = function () {
-    document.getElementById('newTaskID').value = '';
-  };
-}
+Display.prototype.resetForm = function () {
+  document.getElementById('newTaskID').value = '';
+};
 
 Display.prototype.deleteTask = function (e) {
-  const task = e.target.parentElement.parentElement;
-  task.remove();
+  const item = e.target.parentElement.parentElement;
+  const id = item.dataset.createdate;
+  ls.deleteTask(id);
+  item.remove();
 };
 
 export default Display;
