@@ -1,6 +1,8 @@
 function LS() {}
+
 LS.prototype.fetchItem = function () {
   let items = localStorage.getItem('items');
+
   if (items) {
     items = JSON.parse(items);
   } else {
@@ -9,28 +11,27 @@ LS.prototype.fetchItem = function () {
   return items;
 };
 
-LS.prototype.storeItem = function (item) {
+LS.prototype.storeTodo = function (item) {
   const items = this.fetchItem();
   items.unshift(item);
   localStorage.setItem('items', JSON.stringify(items));
 };
 
-LS.prototype.deleteTask = function (id) {
+LS.prototype.deleteTodo = function (id) {
   const items = this.fetchItem();
   const index = items.findIndex((item) => item.id === id);
   items.splice(index, 1);
   localStorage.setItem('items', JSON.stringify(items));
 };
 
-LS.prototype.completeTask = function (id) {
+LS.prototype.completeTodo = function (id) {
   const items = this.fetchItem();
   const index = items.findIndex((item) => item.id === id);
-  if (items[index].iscomplete) {
-    items[index].iscomplete = false;
+  if (items[index].isComplete) {
+    items[index].isComplete = false;
   } else {
-    items[index].iscomplete = true;
+    items[index].isComplete = true;
   }
   localStorage.setItem('items', JSON.stringify(items));
 };
-
 export default LS;
