@@ -22,4 +22,15 @@ LS.prototype.deleteTask = function (id) {
   localStorage.setItem('items', JSON.stringify(items));
 };
 
+LS.prototype.completeTask = function (id) {
+  const items = this.fetchItem();
+  const index = items.findIndex((item) => item.id === id);
+  if (items[index].iscomplete) {
+    items[index].iscomplete = false;
+  } else {
+    items[index].iscomplete = true;
+  }
+  localStorage.setItem('items', JSON.stringify(items));
+};
+
 export default LS;

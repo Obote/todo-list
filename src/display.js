@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import LS from './localstorage.js';
 
 function Display() {}
@@ -32,6 +33,13 @@ Display.prototype.deleteTask = function (e) {
   const id = item.dataset.createdate;
   ls.deleteTask(id);
   item.remove();
+};
+
+Display.prototype.completeTask = function (e) {
+  const item = e.target.parentElement.parentElement;
+  const id = item.dataset.createdate;
+  ls.completeTask(id);
+  item.classList.toggle('completed');
 };
 
 export default Display;
