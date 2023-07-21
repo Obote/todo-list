@@ -103,11 +103,11 @@ For more information on the importance of a professional README for your reposit
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+<!-- ## 🚀 Live Demo <a name="live-demo"></a>
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://obote.github.io/todo-list/)
+- [Live Demo Link](https://obote.github.io/todo-list/) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

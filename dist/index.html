@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-<script defer src="main.js"></script></head>
-<body>
-  <div class="main-container">
-    <header>
-      <h3>To-Do List</h3>
-      <i class="fa-solid fa-arrows-rotate"></i>
-    </header>
-    <form action="">
-      <input type="text" name="list" id="list" placeholder="Add to your list...">
-      <i class="fa-solid fa-arrow-turn-down fa-rotate-270 fa-sm"></i>
-    </form>
-    <ul class="list-container" id="tasks"></ul>
-    <button class="clear-btn" type="button">Clear all completed</button>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <div class="tasklist">
+      <nav>
+        <header>
+          <p>To-Do List</p>
+        </header>
+      </nav>
+      <div class="container">
+        <div class="newTask">
+          <div class="newTaskInput">
+            <input
+              type="text"
+              id="newTaskID"
+              placeholder="Add new task here..."
+            />
+          </div>
+          <div class="newTaskBtn">
+            <button class="AddTaskBtn">Add Task</button>
+            <button class="EditTaskBtn" >Edit To Do</button>
+            <button class="CancelTaskBtn">Cancel</button>
+          </div>
+        </div>
 
-  <script src="index.js"></script>
-</body>
+        <div class="taskList">
+
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="./index.js"></script>
+  </body>
 </html>
