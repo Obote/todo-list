@@ -227,3 +227,23 @@ nav header svg {
 .completed label {
   text-decoration: line-through;
 }
+
+.completeTaskBtn {
+  font-family: 'Noto Serif', serif;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: white;
+  background-color: #c70039;
+  padding: 1rem 1.8rem;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+}
+
+.completeTaskBtn:hover,
+.completeTaskBtn:focus,
+.completeTaskBtn:active {
+  background-color: #8c0032;
+}
