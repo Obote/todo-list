@@ -18,10 +18,21 @@ document.querySelector('.AddTaskBtn').addEventListener('click', (e) => {
 });
 
 document.querySelector('.taskList').addEventListener('click', (e) => {
+  if (e.target.className.includes('taskIconEdit')) {
+    display.editTodo(e);
+  }
   if (e.target.className.includes('taskIconDelete')) {
     display.deleteTodo(e);
   }
   if (e.target.className.includes('task-check')) {
     display.completeTodo(e);
   }
+});
+
+document.querySelector('.EditTaskBtn').addEventListener('click', (e) => {
+  display.updateTodo(e);
+});
+
+document.querySelector('.CancelTaskBtn').addEventListener('click', (e) => {
+  display.cancelTodo(e);
 });

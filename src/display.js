@@ -61,4 +61,47 @@ Display.prototype.completeTodo = function (e) {
   item.classList.toggle('completed');
 };
 
+Display.prototype.editTodo = function (e) {
+  const item = e.target.parentElement.parentElement;
+  const id = item.dataset.createdate;
+  const data = ls.findItem(id);
+
+  document.getElementById('newTaskID').value = data.title;
+  document.getElementById('updateTaskId').value = data.id;
+
+  document.querySelector('.AddTaskBtn').style.display = 'none';
+  document.querySelector('.EditTaskBtn').style.display = 'inline';
+  document.querySelector('.CancelTaskBtn').style.display = 'inline';
+};
+
+Display.prototype.updateTodo = function () {
+  const todoId = document.getElementById('updateTaskId').value;
+  const todoTile = document.getElementById('newTaskID').value;
+  const items = document.querySelectorAll('.taskTitle');
+
+  if (todoTile.length > 0) {
+    ls.updateTodo(todoId, todoTile);
+    items.forEach((title) => {
+      if (title.parentElement.parentElement.dataset.createdate === todoId) {
+        title.innerText = todoTile;
+      }
+    });
+  }
+
+  document.getElementById('newTaskID').value = '';
+  document.getElementById('updateTaskId').value = '';
+
+  document.querySelector('.AddTaskBtn').style.display = 'inline';
+  document.querySelector('.EditTaskBtn').style.display = 'none';
+  document.querySelector('.CancelTaskBtn').style.display = 'none';
+};
+
+Display.prototype.cancelTodo = function () {
+  document.getElementById('newTaskID').value = '';
+  document.getElementById('updateTaskId').value = '';
+
+  document.querySelector('.AddTaskBtn').style.display = 'inline';
+  document.querySelector('.EditTaskBtn').style.display = 'none';
+  document.querySelector('.CancelTaskBtn').style.display = 'none';
+};
 export default Display;

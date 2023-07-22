@@ -34,4 +34,16 @@ LS.prototype.completeTodo = function (id) {
   }
   localStorage.setItem('items', JSON.stringify(items));
 };
+
+LS.prototype.findItem = function (id) {
+  const items = this.fetchItem();
+  return items.find((item) => item.id === id);
+};
+
+LS.prototype.updateTodo = function (id, title) {
+  const items = this.fetchItem();
+  const index = items.findIndex((item) => item.id === id);
+  items[index].title = title;
+  localStorage.setItem('items', JSON.stringify(items));
+};
 export default LS;
