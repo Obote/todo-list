@@ -1,3 +1,4 @@
+import { clearAllCompleted, updateTodoCompleteStatus } from './todoMethods.js';
 import LS from './localstorage.js';
 
 function Display() {}
@@ -21,6 +22,18 @@ Display.prototype.showAllTodos = function () {
   </div>`;
   });
   document.querySelector('.taskList').innerHTML = newHtml;
+};
+
+Display.prototype.clearCompleted = function () {
+  clearAllCompleted();
+  this.showAllTodos();
+};
+
+Display.prototype.completeTodo = function (e) {
+  const item = e.target.parentElement.parentElement;
+  const id = item.dataset.createdate;
+  const isComplete = item.classList.toggle('completed');
+  updateTodoCompleteStatus(id, isComplete);
 };
 
 Display.prototype.addToDisplay = function (item) {
@@ -105,11 +118,4 @@ Display.prototype.cancelTodo = function () {
   document.querySelector('.CancelTaskBtn').style.display = 'none';
 };
 
-Display.prototype.clearCompleted = function () {
-  const items = ls.fetchItem();
-  const updatedItems = items.filter((itm) => !itm.isComplete);
-  ls.saveItems(updatedItems);
-
-  this.showAllTodos();
-};
 export default Display;
