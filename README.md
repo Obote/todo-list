@@ -65,7 +65,7 @@ For more information on the importance of a professional README for your reposit
 
 # 📖 [To-Do List] <a name="about-project"></a>
 
-**[To-Do List]** is a project i hhave build with simple HTML list of To Do tasks
+In this project, The user will also be able to mark task completion by selecting the corresponding checkbox (or undo it by unchecking the checkbox). The updated tasks list will be stored in local storage.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -79,9 +79,9 @@ For more information on the importance of a professional README for your reposit
 </details>
 
 <details>
-  <summary>CSSmary>
+  <summary>CSS</summary>
   <ul>
-    <li><a href="#">CSS</a></li>
+    <li><a href="https://css-tricks.com/css-style-guides/"></a></li>
   </ul>
 </details>
 
@@ -259,7 +259,7 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
