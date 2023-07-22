@@ -36,3 +36,7 @@ document.querySelector('.EditTaskBtn').addEventListener('click', (e) => {
 document.querySelector('.CancelTaskBtn').addEventListener('click', (e) => {
   display.cancelTodo(e);
 });
+
+document.querySelector('.completeTaskBtn').addEventListener('click', (e) => {
+  display.clearCompleted(e);
+});

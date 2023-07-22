@@ -104,4 +104,12 @@ Display.prototype.cancelTodo = function () {
   document.querySelector('.EditTaskBtn').style.display = 'none';
   document.querySelector('.CancelTaskBtn').style.display = 'none';
 };
+
+Display.prototype.clearCompleted = function () {
+  const items = ls.fetchItem();
+  const updatedItems = items.filter((itm) => !itm.isComplete);
+  ls.saveItems(updatedItems);
+
+  this.showAllTodos();
+};
 export default Display;

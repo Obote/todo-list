@@ -46,4 +46,8 @@ LS.prototype.updateTodo = function (id, title) {
   items[index].title = title;
   localStorage.setItem('items', JSON.stringify(items));
 };
+
+LS.prototype.saveItems = function (items) {
+  localStorage.setItem('items', JSON.stringify(items));
+};
 export default LS;
