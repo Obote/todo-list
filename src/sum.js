@@ -1,2 +1,2 @@
-const dat=new Date().toLocaleString();
+const dat = new Date().toLocaleString();
 console.log(dat);
