@@ -195,6 +195,12 @@ Example:
 - Twitter: [@Obote_denis](https://twitter.com/Obote_denis)
 - LinkedIn: [Obote-denis](https://www.linkedin.com/in/obote-denis-9859a2a3/)
 
+👤 **Obote**
+
+- GitHub: [@MayPyone](https://github.com/MayPyone)
+- Twitter: [@maypyone015](https://twitter.com/maypyone015)
+- LinkedIn: [may-pyone](https://www.linkedin.com/in/may-pyone-9439961a3/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
