@@ -4,7 +4,7 @@ import LS from './localstorage.js';
 
 describe('Editing data', () => {
   beforeEach(() => {
-     localStorage.clear();
+    localStorage.clear();
   });
 
   afterEach(() => {
