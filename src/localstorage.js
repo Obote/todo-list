@@ -1,4 +1,5 @@
 import Todo from './todo.js';
+
 function LS() {}
 
 LS.prototype.fetchItem = function () {
