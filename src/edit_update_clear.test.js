@@ -3,7 +3,6 @@ import Todo from './todo.js';
 import LS from './localstorage.js';
 import Display from './display.js';
 
-
 describe('Editing data', () => {
   beforeEach(() => {
     localStorage.clear();
@@ -12,30 +11,8 @@ describe('Editing data', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
-  test('2+1 should be 3', () => {
-    expect(2 + 1).toBe(3);
-  });
 
-  test('Edit one item', () => {
-    //const event = new KeyboardEvent('keypress', { key: 'Enter' });
-//      const con = document.createElement('input');
-//      const con2 = document.createElement('input');
-//     // con.className='newTaskID';
-//      con2.className="updateTaskId";
-//      con.className = 'newTaskID';
-//      document.body.appendChild(con2);
-//      document.body.appendChild(con);
-//      con.value=" ";
-//      con2.value=" ";
-
-//      const display = new Display();
-
-// const item = new Todo('one');
-// const container = document.querySelector('.container');
-// const ls = new LS();
-// ls.storeTodo(item);
-//   const data= display.editdata("two",1);
-//     const lists = JSON.parse(localStorage.getItem('items')); 
+test('Edit one item', () => {
 let ls = new LS();
 const display = new Display();
 const item = new Todo('one');
@@ -78,9 +55,6 @@ describe('Editing data', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
-  test('2+1 should be 3', () => {
-    expect(2 + 1).toBe(3);
-  });
 
   test('Edit one item', () => {
 
@@ -111,5 +85,56 @@ const lists = JSON.parse(localStorage.getItem('items'));
 
 expect(lists[2].isComplete).toBe(true);
   })
+
+})
+
+describe('Clear all completed function', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  test('Clear all completed function for one completed test', () => {
+
+  let ls = new LS();
+  const display = new Display();
+  const item = new Todo('one');
+const item2 = new Todo('two');
+const item3 = new Todo('three');
+item.isComplete=true;
+ls.storeTodo(item);
+ ls.storeTodo(item2);
+ ls.storeTodo(item3);
+//test clear all funtion.
+  const items = ls.fetchItem();
+  const updatedItems = items.filter((item) => !item.isComplete);
+  ls.saveItems(updatedItems);
+ const lists = JSON.parse(localStorage.getItem('items'));
+  expect(lists.length).toBe(2);
+  });
+
+  test('Clear all completed function for all completed tasks test', () => {
+
+    let ls = new LS();
+    const display = new Display();
+    const item = new Todo('one');
+  const item2 = new Todo('two');
+  const item3 = new Todo('three');
+  item.isComplete=true;
+  item2.isComplete=true;
+  item3.isComplete=true;
+  ls.storeTodo(item);
+   ls.storeTodo(item2);
+   ls.storeTodo(item3);
+  //test clear all funtion.
+    const items = ls.fetchItem();
+    const updatedItems = items.filter((item) => !item.isComplete);
+    ls.saveItems(updatedItems);
+   const lists = JSON.parse(localStorage.getItem('items'));
+    expect(lists.length).toBe(0);
+    });
 
 })
