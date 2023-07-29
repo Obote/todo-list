@@ -1,3 +1,4 @@
+import Todo from './todo.js';
 function LS() {}
 
 LS.prototype.fetchItem = function () {
@@ -43,7 +44,7 @@ LS.prototype.findItem = function (id) {
 LS.prototype.updateTodo = function (id, title) {
   const items = this.fetchItem();
   const index = items.findIndex((item) => item.id === id);
-  items[index].title = title;
+  items[index] = new Todo(title);
   localStorage.setItem('items', JSON.stringify(items));
 };
 
